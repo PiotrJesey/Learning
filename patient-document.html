@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Patient Document Layout</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 20px;
+display: flex;
+justify-content: center;
+background: #f5f5f5;
+}
+
+.container {
+max-height: 400px;
+width: 100%;
+max-width: 800px;
+background: #ffffff;
+border: 1px solid #ddd;
+border-radius: 12px;
+padding: 20px;
+display: flex;
+flex-direction: column;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header {
+display: grid;
+grid-template-columns: auto 140px;
+align-items: start;
+gap: 20px;
+}
+
+table {
+border-collapse: collapse;
+width: 60%;
+background: #e6f0ff;
+border-radius: 8px;
+overflow: hidden;
+}
+
+td {
+padding: 6px 4px;
+border-bottom: 1px solid #c7d6ff;
+font-size: 14px;
+}
+
+.logo {
+width: 60px;
+height: 60px;
+background: #e0e0e0;
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 12px;
+color: #555;
+}
+
+.title {
+margin-top: auto;
+text-align: center;
+font-size: 18px;
+font-weight: bold;
+padding-top: 20px;
+}
+
+td:nth-child(3) {
+background: #ffffff !important;
+border-bottom: none !important;
+vertical-align: top !important;
+text-align: right !important;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<table>
+<tr style="background: #e6f0ff;"><td style="border-radius: 8px 0 0 0;"><strong>Patient Name:</strong></td><td>John Doe</td><td rowspan="4"><div class="logo">LOGO</div></td></tr>
+<tr style="background: #e6f0ff;"><td><strong>Date of Birth:</strong></td><td>01/01/1980</td></tr>
+<tr style="background: #e6f0ff;"><td><strong>Medical ID:</strong></td><td>123456789</td></tr>
+<tr style="background: #e6f0ff;"><td style="border-radius: 0 0 0 8px;"><strong>Physician:</strong></td><td>Dr. Smith</td></tr>
+</table>
+</div>
+
+<div class="title">Document Title</div>
+</div>
+</body>
+</html>
